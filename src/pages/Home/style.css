@@ -1,0 +1,27 @@
+.homeBx {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.headerBx {
+  max-width: 97%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+}
+
+.mainBx {
+  display: flex;
+  flex-direction: column;
+  max-width: 97%;
+  margin: auto auto;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.cardBx {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+}
