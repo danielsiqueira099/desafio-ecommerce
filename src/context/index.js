@@ -6,6 +6,8 @@ const AplicationContext = createContext()
 export function AplicationProvider({ children }) {
   const [products, setProducts] = useState([])
   const [isModalVisible, setIsModalVisible] = useState(false)
+  const [productsCar, setProductsCar] = useState([])
+  const [isSnackVisible, setIsSnackVisible] = useState(false)
 
 
   return (
@@ -14,7 +16,11 @@ export function AplicationProvider({ children }) {
         products,
         setProducts,
         isModalVisible,
-        setIsModalVisible
+        setIsModalVisible,
+        productsCar,
+        setProductsCar,
+        isSnackVisible,
+        setIsSnackVisible
       }}
     >
       { children }
