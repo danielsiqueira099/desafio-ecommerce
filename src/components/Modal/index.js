@@ -4,7 +4,7 @@ import AplicationContext from '../../context';
 import './styles.css';
 
 const ModalCart = ({ title }) => {
-  const { setIsModalVisible } = useContext(AplicationContext)
+  const { setIsModalVisible, productsCar } = useContext(AplicationContext)
 
   const handleCancel = useCallback(() => {
     setIsModalVisible(false);
