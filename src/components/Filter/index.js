@@ -14,21 +14,21 @@ function Filter() {
     const newProducts = products.sort((item1, item2) => (item1.name > item2.name) ? 1 : ((item2.name > item1.name) ? -1 : 0))
    
     setProducts([...newProducts])
-  }, [products])
+  }, [products, setProducts])
 
   //tratamento para ordenar a lista de produtos dos mais populares aos menos populares
   const treatmentStar = useCallback(() => {
     const newProducts = products.sort((item1, item2) => (item2.score > item1.score) ? 1 : ((item1.score > item2.score) ? -1 : 0))
    
     setProducts([...newProducts])
-  }, [products])
+  }, [products, setProducts])
 
   //tratamento para ordenar a lista de produtos em ordem de valor do menor para o maior
   const treatmentPrice = useCallback(() => {
     const newProducts = products.sort((item1, item2) => (item1.price > item2.price) ? 1 : ((item2.price > item1.price) ? -1 : 0))
    
     setProducts([...newProducts])
-  }, [products])
+  }, [products, setProducts])
 
   return (
     <div className="filterBx">
