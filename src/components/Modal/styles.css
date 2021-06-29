@@ -12,7 +12,7 @@
 
 .contentModal {
   width: 30%;
-  height: 50%;
+  min-height: 50%;
   background-color: #fff;
   border-radius: 1%;
   align-items: center;
@@ -22,9 +22,6 @@
 }
 
 .buttonBx {
-  position: absolute;
-  bottom: 0;
-  right: 0;
   margin: 10px;
 }
 
@@ -41,4 +38,8 @@
   padding: 5px;
   font-weight: bold;
   cursor: pointer;
+}
+
+.listBx {
+  width: 80%;
 }
