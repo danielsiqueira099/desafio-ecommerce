@@ -4,7 +4,7 @@ import AplicationContext from '../../context'
 import './styles.css'
 
 function Card({ item }) {
-  const { setProductsCar, setIsSnackVisible } = useContext(AplicationContext)
+  const { setProductsCar, setIsSnackVisible, setSnackMessage } = useContext(AplicationContext)
 
   const handleBuy = useCallback(() => {
     setProductsCar(prev => [...prev, item])
@@ -19,6 +19,7 @@ function Card({ item }) {
         <h3>{item.name}</h3>
         <h2 className="price">R${item.price}</h2>
         <button onClick={() => {
+          setSnackMessage('Produto adicionado ao carrinho!')
           setIsSnackVisible(true)
           handleBuy()
         }} className="buy">Comprar</button>
