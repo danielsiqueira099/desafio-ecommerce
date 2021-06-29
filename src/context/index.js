@@ -8,6 +8,7 @@ export function AplicationProvider({ children }) {
   const [isModalVisible, setIsModalVisible] = useState(false)
   const [productsCar, setProductsCar] = useState([])
   const [isSnackVisible, setIsSnackVisible] = useState(false)
+  const [snackMessage, setSnackMessage] = useState(false)
 
 
   return (
@@ -20,7 +21,9 @@ export function AplicationProvider({ children }) {
         productsCar,
         setProductsCar,
         isSnackVisible,
-        setIsSnackVisible
+        setIsSnackVisible,
+        snackMessage,
+        setSnackMessage
       }}
     >
       { children }
