@@ -5,13 +5,16 @@ const AplicationContext = createContext()
 
 export function AplicationProvider({ children }) {
   const [products, setProducts] = useState([])
+  const [isModalVisible, setIsModalVisible] = useState(false)
 
 
   return (
     <AplicationContext.Provider
       value={{
         products,
-        setProducts
+        setProducts,
+        isModalVisible,
+        setIsModalVisible
       }}
     >
       { children }
