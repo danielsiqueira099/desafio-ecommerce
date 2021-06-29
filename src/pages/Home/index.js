@@ -15,11 +15,19 @@ function Alert(props) {
 }
 
 function Home() {
-  const { products, setProducts, setIsModalVisible, isModalVisible, isSnackVisible, setIsSnackVisible } = useContext(AplicationContext)
+  const { 
+    products, 
+    setProducts, 
+    setIsModalVisible, 
+    isModalVisible, 
+    isSnackVisible, 
+    setIsSnackVisible, 
+    snackMessage 
+  } = useContext(AplicationContext)
 
   const showModal = useCallback(() => {
     setIsModalVisible(true);
-  }, [])
+  }, [setIsModalVisible])
 
   useEffect(() => {
     setProducts(Data)
@@ -37,7 +45,7 @@ function Home() {
     <div className="homeBx">
       <Snackbar open={isSnackVisible} autoHideDuration={3000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="success">
-          Adicionado ao carrinho!
+          {snackMessage}
         </Alert>
       </Snackbar>
 
