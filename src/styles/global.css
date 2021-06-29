@@ -8,6 +8,11 @@ body {
   background-image: url(https://i.ibb.co/bKLz1xX/apps.png);
 }
 
+body button {
+  border: none;
+  background: transparent;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
